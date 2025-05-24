@@ -97,7 +97,7 @@ def user_login(request):
             return redirect('dashboard')
         else:   
             messages.error(request, "There was an error logging in, try again.")
-            return redirect('login')
+            return redirect('user_login')
     return render(request, 'authenticate/login.html')
 
 

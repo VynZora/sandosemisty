@@ -385,3 +385,18 @@ def add_price(request):
     #  404 view\
 def page_404(request, exception):
     return render(request, '404.html', status=404)
+
+
+# robots.txt
+from django.http import HttpResponse
+
+def robots_txt(request):
+    lines = [
+        "User-agent: *",
+        "Disallow: /admin/",
+        "Disallow: /secret/",
+        "Disallow: /private/",
+        "Allow: /static/",
+        "Sitemap: https://sandosemisty.com/sitemap.xml",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")

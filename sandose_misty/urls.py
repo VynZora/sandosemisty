@@ -18,9 +18,19 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+# sitemap
+from django.contrib.sitemaps.views import sitemap
+from sandose_misty_app.sitemaps import StaticViewSitemap, NearbyPlaceSitemap
+
+sitemaps = {
+    'static': StaticViewSitemap,
+    'nearby_place': NearbyPlaceSitemap,
+}
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('sandose_misty_app.urls')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'sandose_misty_app.views.page_404'

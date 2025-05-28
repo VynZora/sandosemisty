@@ -275,7 +275,7 @@
             {% for place in places %}
             
             <div class="col-md-6">
-                <a href="{% url 'near_by_place' place.id %}" style="color: #fff" >
+                <a href="{% url 'near_by_place_details' place.id %}" style="color: #fff" >
                 <div class="hover-card position-relative overflow-hidden rounded shadow-sm">
                     <img src="{{ place.image.url }}" class="w-100 h-100 object-fit-cover" alt="{{ place.name }}">
                     <div class="hover-content d-flex flex-column justify-content-end text-start p-4">

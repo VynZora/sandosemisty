@@ -141,7 +141,7 @@
                                 <img src="{% static 'image/placeholder-thumb.jpg' %}" alt="No Image" style="width: 60px; height: 60px;">
                             {% endif %}
                             <div class="media-body">
-                                <a href="{% url 'near_by_place' item.id %}">
+                                <a href="{% url 'near_by_place_details' item.id %}">
                                     <h3>{{ item.name|truncatewords:20 }}</h3>
                                 </a>
                                 <p>{{ item.created_date|date:"d-m-Y" }} </p>

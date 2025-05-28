@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sandose_misty_app'
+    'django.contrib.sitemaps',
+    'sandose_misty_app',
+    
+
 ]
 
 MIDDLEWARE = [

@@ -6,17 +6,17 @@ from django.conf.urls.static import static
 
 urlpatterns = [
   path('', views.index, name= 'index'),
-  path('about', views.about, name= 'about'),
-  path('deluxe-room', views.deluxe_room, name= 'deluxe_room'),
-  path('suite-room', views.suite_room, name= 'suite_room'),
+  path('about/', views.about, name= 'about'),
+  path('deluxe-room/', views.deluxe_room, name= 'deluxe_room'),
+  path('suite-room/', views.suite_room, name= 'suite_room'),
 
 
   path('nearby-place/', views.near_by_place, name='near_by_place'),
-  path('nearby-place/<int:place_id>/', views.near_by_place_details, name='near_by_place'),
+  path('nearby-place/<int:place_id>/', views.near_by_place_details, name='near_by_place_details'),
   path('our-gallery', views.our_gallery, name= 'our_gallery'),
   path('gallery/<int:folder_id>/', views.gallery, name= 'gallery'),
-  path('contact', views.contact, name= 'contact'),
-  path('booking', views.booking, name= 'booking'),
+  path('contact/', views.contact, name= 'contact'),
+  path('booking/', views.booking, name= 'booking'),
 
 
 
@@ -74,6 +74,10 @@ urlpatterns = [
 
     # add PRice
     path('add-price', views.add_price, name='add_price'),
+
+
+     #robots.txt
+    path('robots.txt', views.robots_txt, name='robots_txt'),
 
 
 

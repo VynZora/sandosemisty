@@ -78,7 +78,7 @@ class RoomPrice(models.Model):
         ('Suite', 'Suite Room'),
     ]
 
-    room_type = models.CharField(max_length=20, choices=ROOM_TYPE_CHOICES)
+    room_type = models.CharField(max_length=100, choices=ROOM_TYPE_CHOICES)
     price_per_night = models.DecimalField(max_digits=10, decimal_places=2, help_text="Original price per night")
     offer_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True, help_text="Offer price per night")
 

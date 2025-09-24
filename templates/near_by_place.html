@@ -108,21 +108,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="row g-4 justify-content-center">
 
             {% for place in places %}
-            
-            <div class="col-md-6">
-                <a href="{% url 'near_by_place' place.id %}" style="color: #fff" >
-                <div class="hover-card position-relative overflow-hidden rounded shadow-sm">
-                    <img src="{{ place.image.url }}" class="w-100 h-100 object-fit-cover" alt="{{ place.name }}">
-                    <div class="hover-content d-flex flex-column justify-content-end text-start p-4">
-                        <h5 class="text-white fw-bold">{{ place.name }}</h5>
-       
-                    
-
-                    </div>
-                </div>
-            </a>
+<div class="col-md-6">
+    <a href="{% url 'near_by_place_details' place.id %}" style="color: #fff">
+        <div class="hover-card position-relative overflow-hidden rounded shadow-sm">
+            <img src="{{ place.image.url }}" class="w-100 h-100 object-fit-cover" alt="{{ place.name }}">
+            <div class="hover-content d-flex flex-column justify-content-end text-start p-4">
+                <h5 class="text-white fw-bold">{{ place.name }}</h5>
             </div>
-            {% endfor %}
+        </div>
+    </a>
+</div>
+{% endfor %}
         </div>
     </div>
 </section>
@@ -199,7 +195,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="single-footer-widget">
                             <h6 class="footer_title">Contact Details</h6>    
                             <ul class="list_style">
-                                <li><i class="fa fa-map-marker"></i> 123, Sandose Mist Avenue, City Name</li>
+                                <li><i class="fa fa-map-marker"></i> Vattavada, Idukki, Kerala - 685615</li>
                                 <li><i class="fa fa-phone"></i> 9496117669</li>
                                 <li><i class="fa fa-envelope"></i> sandosemisty@gmail.com</li>
                                 <!-- <li><i class="fa fa-globe"></i> www.sandosemist.com</li> -->

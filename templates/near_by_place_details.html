@@ -150,7 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <a href="{% url 'near_by_place_details' item.id %}">
                                     <h3>{{ item.name|truncatewords:20 }}</h3>
                                 </a>
-                                <p>{{ item.created_date|date:"d-m-Y" }} </p>
+                                <!-- <p>{{ item.created_date|date:"d-m-Y" }} </p> -->
                             </div>
                         </div>
                         {% endfor %}
